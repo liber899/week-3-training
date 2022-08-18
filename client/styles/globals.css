@@ -1,0 +1,123 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #f6f6f9;
+  color: black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.sidebar {
+  height: 100vh;
+  background: white;
+  position: fixed;
+  width: 240px;
+  z-index: 2;
+  position: fixed;
+  padding-top: 20px;
+  color: black;
+  border: 1px solid lightgray;
+}
+
+.close_menu {
+  display: none;
+}
+
+.active {
+  background: #d5e6fb;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.form__validate {
+  display: block;
+}
+
+.form__valid {
+  display: none;
+}
+
+.form__validate {
+  color: red;
+  font-size: 16px;
+}
+
+.table_title {
+  padding: 10px;
+}
+
+.pageNumbers {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.pagination {
+  padding: 10px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  background-color: white;
+}
+
+.active_page {
+  padding: 10px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  background-color: #d5e6fb;
+}
+
+.table_container {
+  height: 500px;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: black;
+    background: white;
+  }
+}
+
+@media only screen and (max-device-width: 414px) {
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar_mobile {
+    padding-top: 20px;
+    height: 100vh;
+    background: white;
+    position: fixed;
+    width: 90%;
+    z-index: 2;
+    position: fixed;
+    color: white;
+    border: 1px solid lightgray;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .close_menu_mobile {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .menu_button {
+    border: none;
+    background: transparent;
+  }
+}
