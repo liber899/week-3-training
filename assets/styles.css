@@ -4189,11 +4189,7 @@ body {
   flex-grow: 0;
   padding-right: 10px;
 }
-@media (min-width: 1200px) {
-  .toolbar.toolbar--two-cols .toolbar-left {
-    padding-right: 20px;
-  }
-}
+
 @media (min-width: 768px) {
   .toolbar.toolbar--two-cols:not(.toolbar--text-box-large) .toolbar-left.toolbar-left--search-left {
     flex-basis: 350px;
@@ -4335,11 +4331,11 @@ body {
 
 .toolbar-logo {
   display: inline-block;
-  margin: 13px 0;
+  margin: 0px 0;
 }
 @media (min-width: 768px) {
   .toolbar-logo {
-    margin: 20px 0;
+    margin: 0px 0;
   }
 }
 @media (max-width: 767px) {
@@ -4476,10 +4472,8 @@ body {
   transition: max-width 0.5s, border-radius 0.2s, padding-right 0.4s;
   padding-right: 45px;
   text-align: left;
-  overflow: hidden;
-  
-  border: 1px solid #ff4eed;
-  
+  overflow: hidden; 
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .toolbar-center .main-search__form {
   text-align: center;
@@ -4522,12 +4516,14 @@ body {
   height: 38px;
   line-height: 38px;
   transition: all 400ms;
-  color: #1b1b1b;
-  background: #ffffff;
+  color: white;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   font-weight: normal;
   flex: 1 1;
+}
+.main-search__form button {
+  background-color: transparent;
 }
 @media (min-width: 768px) {
   .main-search--show-popup .main-search__form input {
@@ -4625,7 +4621,6 @@ body:not(.tab-used) .main-search__form .id-main-search__product-types select:foc
   z-index: 2;
   width: 46px;
   border: none;
-  background: #ff4eed;
   padding: 0;
   position: absolute;
   right: 0;
@@ -6228,7 +6223,7 @@ body:not(.tab-used) .main-search__form .id-main-search__product-types select:foc
 }
 
 .disclosure {
-  position: relative;
+  /* position: relative; */
 }
 
 .disclosure__toggle {
@@ -6256,7 +6251,7 @@ body:not(.tab-used) .main-search__form .id-main-search__product-types select:foc
 }
 .localization--header .disclosure-list {
   bottom: auto;
-  top: 130%;
+  /* top: 130%; */
   right: 0;
 }
 .localization--header .selectors-form {
@@ -11496,11 +11491,6 @@ shopify-payment-terms {
     transform: translate3d(0, -10px, 0);
   }
 }
-@media (min-width: 1200px) {
-  .main-search .main_search__popup {
-    right: 46px;
-  }
-}
 @media (min-width: 768px) {
   .main-search.main-search--text-box-large .main_search__popup {
     top: calc(100% - 24px);
@@ -12058,4 +12048,104 @@ body.tab-used .cc-checkbox__input:focus + .cc-checkbox__label, html.no-js .cc-ch
 }
 #shopify-product-reviews .spr-icon-star-half-alt::after {
   clip: rect(0px, 7.5px, 14px, 0px);
+}
+
+.bss-custom-container {
+  width: 100%!important;
+  max-width: 100%!important;
+  background-color: #12283E;
+}
+.nav-item-link-title {
+  color: white!important;
+}
+
+.bss-bar {
+  padding: 0px;
+  width: 100%!important;
+  overflow: hidden!important;
+  max-width: 100%!important;
+}
+.bss-marquee {
+  display: block;
+  width: fit-content;
+  overflow-x: hidden!important;
+  animation: marquee 15s linear infinite;
+  margin-right: -100%;
+  text-align: right!important;
+}
+.bss-marquee > span,
+.bss-marquee > a {
+  white-space:nowrap;
+  overflow: hidden!important;
+}
+
+.bss-header {
+  width: 100%;
+  padding: 0px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+.bss-custom-nav {
+  flex: 1 0 auto;
+}
+
+.bss-custom-nav-list {
+  list-style-type: none;
+}
+.bss-custom-nav-list_item {
+  display: inline;
+}
+.bss-custom-nav-list_item > a {
+  color: black;
+  font-weight: 600;
+  margin-right: 5%;
+}
+.logo-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  height: 55px;
+}
+
+.bss-account-regis_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 500ms ease;
+  padding: 20px;
+  background: #eee;
+}
+.bss-account-regis_content > a {
+  padding: 10px 20px;
+  background-color: #12283E;
+  color: white;
+  border-radius: 2px;
+}
+.bss-account-regis_content > p {
+  line-height: 1.5em;
+  font-size: 20px;
+}
+.bss-account-regis {
+  position: relative;
+  display: none;
+}
+.bss-close-btn {
+  position: absolute;
+  right: 10px;
+  top: 1px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
 }

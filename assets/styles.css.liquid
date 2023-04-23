@@ -12345,3 +12345,70 @@ body.tab-used .cc-checkbox__input:focus + .cc-checkbox__label, html.no-js .cc-ch
 #shopify-product-reviews .spr-icon-star-half-alt::after {
   clip: rect(0px, 7.5px, 14px, 0px);
 }
+
+.bss-custom-container {
+  width: 100%!important;
+  max-width: 100%!important;
+  background-color: #12283E;
+}
+.nav-item-link-title {
+  color: white!important;
+}
+
+.bss-bar {
+  padding: 0px;
+  width: 100%!important;
+  overflow: hidden!important;
+  max-width: 100%!important;
+}
+.bss-marquee {
+  display: block;
+  width: fit-content;
+  overflow-x: hidden!important;
+  animation: marquee 15s linear infinite;
+  margin-right: -100%;
+  text-align: right!important;
+}
+.bss-marquee > span,
+.bss-marquee > a {
+  white-space:nowrap;
+  overflow: hidden!important;
+}
+
+.bss-header {
+  width: 100%;
+  padding: 0px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+.bss-custom-nav {
+  flex: 1 0 auto;
+}
+
+.bss-custom-nav-list {
+  list-style-type: none;
+}
+.bss-custom-nav-list_item {
+  display: inline;
+}
+.bss-custom-nav-list_item > a {
+  color: black;
+  font-weight: 600;
+  margin-right: 5%;
+}
+.logo-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  height: 55px;
+}
